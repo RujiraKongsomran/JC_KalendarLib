@@ -9,6 +9,8 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.himanshoe.kalendar.common.KalendarKonfig
+import com.himanshoe.kalendar.common.YearRange
 import com.himanshoe.kalendar.ui.Kalendar
 import com.himanshoe.kalendar.ui.KalendarType
 import com.rujirakongsomran.jc_kalendarlib.ui.theme.JC_KalendarLibTheme
@@ -34,7 +36,9 @@ class MainActivity : ComponentActivity() {
 fun CreateCalendar() {
     Kalendar(
         kalendarType = KalendarType.Firey(),
-
+        kalendarKonfig = KalendarKonfig(
+            yearRange = YearRange(0,5)
+        ),
         onCurrentDayClick = { day, event ->
         }, errorMessage = {
 
