@@ -32,11 +32,13 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun CreateCalendar() {
-    Kalendar(kalendarType = KalendarType.Firey(), onCurrentDayClick = { day, event ->
+    Kalendar(
+        kalendarType = KalendarType.Firey(),
 
-    }, errorMessage = {
+        onCurrentDayClick = { day, event ->
+        }, errorMessage = {
 
-    })
+        })
 }
 
 @Preview(showBackground = true)
